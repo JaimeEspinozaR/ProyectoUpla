@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+/* @import '@nebular/theme/styles/theming'; */
+/* @import '@nebular/theme/styles/themes/cosmic'; */
+ 
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } 
+@import 'themes';
+ 
+@import '~@nebular/theme/styles/globals';
+ 
+@include nb-install() {
+  @include nb-theme-global();
+};

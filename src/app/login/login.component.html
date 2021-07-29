@@ -1,0 +1,36 @@
+<div class="wrapp">
+	<mat-card class="login-box">
+		<mat-card-header>
+			<mat-card-title>Login</mat-card-title>
+		</mat-card-header>
+		<mat-card-content>
+			<img loading="lazy" src="https://www.upla.cl/normasgraficas/wp-content/uploads/2016/01/logo_upla.png"
+				alt="Universidad de Playa Ancha - Acreditada 5 años en Docencia de Pregrado, Gestión Institucional, Vinculación con el medio. Desde el 27 de septiembre de 2016, hasta el 27 de septiembre de 2021"
+				title="Universidad de Playa Ancha - Acreditada 5 años en Docencia de Pregrado, Gestión Institucional, Vinculación con el medio. Desde el 27 de septiembre de 2016, hasta el 27 de septiembre de 2021"
+				height="auto" width="50%" style="float:right">
+			<form class="example-form">
+				<table class="example-full-width" cellspacing="0">
+					<tr>
+						<td>
+							<mat-form-field class="example-full-width">
+								<input matInput placeholder="Username" [(ngModel)]="username" name="username" required>
+							</mat-form-field>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<mat-form-field class="example-full-width">
+								<input matInput placeholder="Password" [(ngModel)]="password" type="password"
+									name="password" required>
+							</mat-form-field>
+						</td>
+					</tr>
+				</table>
+			</form>
+			<!-- <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner> -->
+		</mat-card-content>
+		<mat-card-actions>
+			<button mat-raised-button (click)="login()" color="primary">Login</button>
+		</mat-card-actions>
+	</mat-card>
+</div>

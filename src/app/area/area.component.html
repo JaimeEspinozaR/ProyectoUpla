@@ -1,0 +1,158 @@
+<mat-card>
+	<mat-card-title>{{nombre}}</mat-card-title>
+
+	<mat-card-content>
+		<mat-accordion>
+			<mat-expansion-panel>
+				<mat-expansion-panel-header>
+					<mat-panel-title>
+						Sensores
+					</mat-panel-title>
+					<mat-panel-description>
+						Configuracion sensores
+					</mat-panel-description>
+				</mat-expansion-panel-header>
+
+				<mat-card>
+					<mat-card-content>
+						<mat-card>
+							<mat-card-title>Sensores Atmosfericos</mat-card-title>
+							<mat-card-content>
+								<div class="example-button-row">
+									<title></title>
+									<a mat-raised-button href="" target="_self" color="primary">Sensor 1</a>
+									<a mat-raised-button href="" target="_self" color="primary">Sensor 2</a>
+								</div>
+
+							</mat-card-content>
+						</mat-card>
+
+						<mat-card>
+							<mat-card-title>Sensores Atmosfericos</mat-card-title>
+							<mat-card-content>
+								<div class="example-button-row">
+									<title></title>
+									<a mat-raised-button href="" target="_self" color="primary">Sensor 1</a>
+									<a mat-raised-button href="" target="_self" color="primary">Sensor 2</a>
+								</div>
+							</mat-card-content>
+						</mat-card>
+						<mat-card>
+							<mat-card-title>Sensores Suelo</mat-card-title>
+							<mat-card-content>
+								<div class="example-button-row">
+									<title></title>
+									<a mat-raised-button href="" target="_self" color="primary">Sensor 1</a>
+									<a mat-raised-button href="" target="_self" color="primary">Sensor 2</a>
+								</div>
+							</mat-card-content>
+						</mat-card>
+						<mat-card>
+							<mat-card-title>Sensores Riego</mat-card-title>
+							<mat-card-content>
+								<div class="example-button-row">
+									<title></title>
+									<a mat-raised-button href="" target="_self" color="primary">Sensor 1</a>
+									<a mat-raised-button href="" target="_self" color="primary">Sensor 2</a>
+								</div>
+							</mat-card-content>
+						</mat-card>
+					</mat-card-content>
+					<mat-card-actions>
+						<button mat-raised-button href="" target="_self" color="primary" (click)=postRegar()>{{texto_boton}}</button>
+					</mat-card-actions>
+				</mat-card>
+			</mat-expansion-panel>
+
+
+			<mat-expansion-panel>
+				<mat-expansion-panel-header>
+					<mat-panel-title>
+						Monitoreo avanzado
+					</mat-panel-title>
+					<mat-panel-description>
+						Revisa la lectura de los sensores
+					</mat-panel-description>
+				</mat-expansion-panel-header>
+
+
+				<mat-grid-list cols="2" rowHeight="350px">
+					<mat-grid-tile [colspan]="1" [rowspan]="1">
+						<mat-card class="parcela-card">
+							<mat-card-title>Temperatura ambiente</mat-card-title>
+							<mat-card-content>
+								<div class="chart-wrapper">
+									<canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels"
+										[options]="lineChartOptions" [colors]="lineChartColors"
+										[legend]="lineChartLegend" [chartType]="lineChartType"
+										[plugins]="lineChartPlugins">
+									</canvas>
+								</div>
+							</mat-card-content>
+						</mat-card>
+					</mat-grid-tile>
+					<mat-grid-tile [colspan]="1" [rowspan]="1">
+						<mat-card class="parcela-card">
+							<mat-card-title>Temperatura suelo</mat-card-title>
+							<mat-card-content>
+								<div class="chart-wrapper">
+									<canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels"
+										[options]="lineChartOptions" [colors]="lineChartColors"
+										[legend]="lineChartLegend" [chartType]="lineChartType"
+										[plugins]="lineChartPlugins">
+									</canvas>
+								</div>
+							</mat-card-content>
+						</mat-card>
+					</mat-grid-tile>
+					<mat-grid-tile [colspan]="1" [rowspan]="1">
+						<mat-card class="parcela-card">
+							<mat-card-title>Humedad ambiente</mat-card-title>
+							<mat-card-content>
+								<div class="chart-wrapper">
+									<canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels"
+										[options]="lineChartOptions" [colors]="lineChartColors"
+										[legend]="lineChartLegend" [chartType]="lineChartType"
+										[plugins]="lineChartPlugins">
+									</canvas>
+								</div>
+							</mat-card-content>
+						</mat-card>
+					</mat-grid-tile>
+					<mat-grid-tile [colspan]="1" [rowspan]="1">
+						<mat-card class="parcela-card">
+							<mat-card-title>Humedad Suelo</mat-card-title>
+							<mat-card-content>
+								<div class="chart-wrapper">
+									<canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels"
+										[options]="lineChartOptions" [colors]="lineChartColors"
+										[legend]="lineChartLegend" [chartType]="lineChartType"
+										[plugins]="lineChartPlugins">
+									</canvas>
+								</div>
+							</mat-card-content>
+						</mat-card>
+					</mat-grid-tile>
+					<mat-grid-tile [colspan]="1" [rowspan]="1">
+						<mat-card class="parcela-card">
+							<mat-card-title>Cantidad Agua utilizada</mat-card-title>
+							<mat-card-content>
+								<div class="chart-wrapper">
+									<canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels"
+										[options]="lineChartOptions" [colors]="lineChartColors"
+										[legend]="lineChartLegend" [chartType]="lineChartType"
+										[plugins]="lineChartPlugins">
+									</canvas>
+								</div>
+							</mat-card-content>
+						</mat-card>
+					</mat-grid-tile>
+
+
+				</mat-grid-list>
+
+			</mat-expansion-panel>
+		</mat-accordion>
+	</mat-card-content>
+</mat-card>
+ 

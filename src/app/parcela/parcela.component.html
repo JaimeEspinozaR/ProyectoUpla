@@ -1,0 +1,76 @@
+<mat-card> 
+<mat-card-title>Parcelas Cajon de Lebu
+</mat-card-title>
+ <google-map width="100%" height="450px" [center]="center"	[zoom]="zoom"> </google-map> 
+<mat-card-content>
+    <mat-grid-list cols="2" rowHeight="450px">
+      <mat-grid-tile [colspan]="1" [rowspan]="1">         <mat-card class="parcela-card">
+          <mat-card-title>Control Humedad</mat-card-title>           <mat-card-content>
+            <div class="chart-wrapper">               <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
+                [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType"
+                [plugins]="lineChartPlugins">               </canvas>
+            </div>           </mat-card-content>         </mat-card>
+      </mat-grid-tile>       <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <mat-card class="parcela-card">           <mat-card-title>Frecuencia de Riego</mat-card-title>
+          <mat-card-content>             <div class="chart-wrapper">
+              <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
+                [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType"
+                [plugins]="lineChartPlugins">               </canvas>
+            </div>           </mat-card-content>         </mat-card>
+      </mat-grid-tile>       <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <mat-card class="parcela-card">           <mat-card-title>Temperatura Ambiente</mat-card-title>
+          <mat-card-content>             <div class="chart-wrapper">
+              <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
+                [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType"
+                [plugins]="lineChartPlugins">               </canvas>
+            </div>           </mat-card-content>         </mat-card>
+      </mat-grid-tile>       <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <mat-card class="parcela-card">           <mat-card-title>Humedad Ambiente</mat-card-title>
+          <mat-card-content>             <div class="chart-wrapper">
+              <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
+                [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType"
+                [plugins]="lineChartPlugins">               </canvas>
+            </div>           </mat-card-content>         </mat-card>
+      </mat-grid-tile>       
+      
+      <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <mat-card class="parcela-card">           <mat-card-title>Cantidad Agua</mat-card-title>
+          <mat-card-content>             <div class="chart-wrapper">
+              <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
+                [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType"
+                [plugins]="lineChartPlugins">               </canvas>
+            </div>           </mat-card-content>         </mat-card>
+      </mat-grid-tile> 
+      
+<!--       <mat-grid-tile [colspan]="1" [rowspan]="1"> -->
+<!--         <mat-card class="parcela-card">           <mat-card-title>Camaras</mat-card-title> -->
+<!--           <mat-card-content> -->
+          
+          
+<!--           <iframe width="660" height="315" src="https://www.youtube.com/embed/videoseries?list=PLcnjzy0p8cvcGPuYrqRKT94GJGTexQV0u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+<!-- <!--           <iframe width="560" height="315" src="https://www.youtube.com/embed/tPdKmQyh6W8?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> --> -->
+
+<!-- 		  </mat-card-content>         </mat-card> -->
+<!--       </mat-grid-tile>  -->
+      
+      
+      
+      <mat-grid-tile [colspan]="2" [rowspan]="2"> <mat-card
+	class="parcela-card"> <mat-card-title>Areas</mat-card-title>
+<mat-card-content>
+<section> 
+ 
+	
+		<mat-grid-list cols="4" rowHeight="100px"> 
+			<mat-grid-tile *ngFor="let area of areas" 
+			[colspan]="area.cols_c" 
+			[rowspan]="area.rows_c" 
+			(click)="redirect(area.id_area)"  
+			[style.background]="area.color"> 
+			{{area.nombre}} 
+			</mat-grid-tile> 
+		</mat-grid-list> 
+</section>
+
+</mat-card-content> </mat-card> </mat-grid-tile> </mat-grid-list>
+ </mat-card-content> </mat-card>

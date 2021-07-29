@@ -1,0 +1,57 @@
+.inline-block {
+	display: inline-block;
+	height: 100% !important
+}
+
+div#home-content {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	box-sizing: border-box;
+}
+
+p.sender {
+	font-size: 10px !important;
+	color: #ffffffad !important;
+	 border-radius: 25px; 	
+}
+
+.RECIBIDO {
+ 	background-color: #2fa0d2eb;
+    color: white;
+    text-align: left;
+    border-radius: 0px 20px 20px 20px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+}
+
+.ENVIADO {
+	background-color: #54cc7ceb; 
+    color: white;
+    text-align: right;
+    border-radius: 20px 0px 20px 20px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    padding: 5px;
+}
+
+.REGADO {
+	color: gray;
+}
+
+.NUEVO {
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.REGAR_WARNING  {
+	font-size: 23px;
+	font-weight: bold;
+	color: red;
+}
